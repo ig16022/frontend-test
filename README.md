@@ -1,10 +1,11 @@
-# Installation
-Installation requires node.js on your computer
+What URL should be used to access your application?
 
-npm install
+What libraries did you use to write your application?
 
-node server.js
+What influenced the design of your user interface?
 
-# Instructions
-There should now be a web server running at http://localhost:8888
-Follow the instructions displayed on that webpage.
+What steps did you take to make your application user friendly?
+
+What steps did you take to insure your application was secure?
+
+What could be done to the front end or back end to make it more secure?

@@ -1,0 +1,68 @@
+<!--
+    This is the guest book view template
+-->
+
+
+<div class="well objShadow" ng-controller="guestBookController"> 
+
+    <div class="alert alert-danger" ng-show="dataError"> 
+        We are having difficulties with our guest book ({{dataError}}). Please refresh this page to try again.
+    </div>
+
+    <div class="alert alert-info" ng-hide="messageReceived">
+        <p>Thanks for visiting our <a href="#/states"><strong>States</strong></a> app!</p>
+        <p>Sign our guest book, and you will be the first to know when USA finally gets its 51<sup>st</sup> state.</p>
+    </div>
+
+    <div class="alert alert-success" ng-show="messageReceived">
+        <p>Thanks! We'll be in touch!</p>        
+    </div>    
+
+
+    <div class="fiftyPercentW padBottom60" ng-hide="messageReceived">
+	    <form name="messageForm" novalidate>
+	        
+	        <div class="form-group " ng-class="{ 'has-error' : messageForm.phoneNo.$invalid && !messageForm.phoneNo.$pristine }">
+	            <label>Your phone #:</label>
+	            <input name="phoneNo" placeholder="818-555-0000" type="text" class="form-control shortInput" ng-model="phoneNo" required ng-pattern="phoneNumberPattern"/>
+	            <p ng-show="messageForm.phoneNo.$invalid && !messageForm.phoneNo.$pristine" class="help-block">Please enter a valid phone number.</p>
+	        </div>
+	        
+	        <div class="form-group " ng-class="{ 'has-error' : messageForm.message.$invalid && !messageForm.message.$pristine }">
+	            <label>Message:</label>
+	            <input name="message" placeholder="Did you like our app?" type="text" class="form-control wideInput" ng-model="message" required ng-minlength="3" />
+	            <p ng-show="messageForm.message.$invalid && !messageForm.message.$pristine" class="help-block">The message is required. Please enter at least 3 characters.</p>	            
+	        </div>
+
+	        <div>
+	            <button ng-click="addMessage(message, phoneNo)"
+	                ng-disabled="messageForm.$invalid"
+	                class="btn btn-primary">
+	                Sign the Guest Book
+	            </button>
+	        </div>
+
+	    </form>
+	</div>
+
+
+	<div class="panel panel-primary noPaddingNoBorder">
+		<div class="panel-heading">
+			<h3 class="panel-title">What others are saying about the <a href="#/states"><strong>States</strong></a> app:</h3>
+		</div>
+		<div class="panel-body ">
+			<div class="container">
+				<div class="row report">
+
+					<p ng-repeat="messageRec in allMessages">
+						<!-- displaying user name and message only, no phone number-->
+						<span class='minW180'>From user <strong>{{messageRec.user | uppercase}}</strong>:</span>
+						<span ng-bind="messageRec.message"></span>
+					</p>
+					
+				</div>
+			</div>
+		</div>  	
+	</div>
+
+</div>

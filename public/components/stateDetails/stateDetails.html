@@ -1,0 +1,44 @@
+<!-- Template for the State Details Directive -->
+<div class="alert alert-danger" ng-show="dataError">
+        We are unable to get the state information you requested (<span ng-bind="dataError"></span>). Please try again later.
+    </div>
+<div class="container">
+	<div class="row report">
+		<p>
+			<span class='minW180'><strong>State Name: </strong></span>
+			<span ng-bind="currentStateDetails.name"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>Abbreviation: </strong></span>
+			<span ng-bind="currentStateDetails.abbreviation"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>State Capital: </strong></span>
+			<span ng-bind="currentStateDetails.capital"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>Most Populous City: </strong></span>
+			<span ng-bind="currentStateDetails.mostPopulousCity"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>Population: </strong></span>
+			<span ng-bind="currentStateDetails.population"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>Square Miles: </strong></span>
+			<span ng-bind="currentStateDetails.squareMiles"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>First Time Zone: </strong></span>
+			<span ng-bind="currentStateDetails.timeZone1"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>Second Time Zone: </strong></span>
+			<span ng-bind="currentStateDetails.timeZone2"></span>
+		</p>
+		<p>
+			<span class='minW180'><strong>Daylight Savings Time: </strong></span>
+			<span ng-bind="currentStateDetails.dst"></span>
+		</p>
+	</div>
+</div>

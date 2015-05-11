@@ -111,9 +111,9 @@ app.get('/secret', function(request, response) {
 
 app.post('/write', function(request, response) {
     var user = request.cookies.login;
-    if (users[user] === undefined) {
-        return sendUnauthorized(response);
-    }
+    //if (users[user] === undefined) {
+    //    return sendUnauthorized(response);
+    //}
     var msg = request.body.message;
     var phone = request.body.phone;
     if (msg === undefined || phone === undefined) {

@@ -1,0 +1,26 @@
+<!--
+    This is a view that renders the main States screen
+-->
+
+<div class="jumbotron objShadow">
+      <div class="container">
+        <h1 class="jumboHeader">Welcome to the States app!</h1>
+        <p>If you are looking for information on a specific state please select its abbreviation from the dropdown below.</p>
+        <p> 
+        	
+			<select class='objShadow' data-ng-model="currentState" ng-change="stateSelected(currentState)"
+	                data-ng-options="abbreviation for abbreviation in statesAbbreviations">  
+	                <option value=''>- Select a State -</option>              
+	        </select>
+        </p>
+      </div>
+</div>
+
+<div class="panel panel-primary noPaddingNoBorder objShadow">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{currentScreenHeader}}</h3>
+	</div>
+	<div class="panel-body noPaddingNoBorder">
+		<div ng-include="getScreen()" />
+	</div>  	
+</div>

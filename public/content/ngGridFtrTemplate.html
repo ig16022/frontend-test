@@ -1,0 +1,17 @@
+<div ng-show="showFooter" class="ngFooterPanel ng-scope" ng-class="{'ui-widget-content': jqueryUITheme, 'ui-corner-bottom': jqueryUITheme}" ng-style="footerStyle()" style="width: 1136px; height: 55px;">
+    <div class="ngTotalSelectContainer">
+        <div class="ngFooterTotalItems" ng-class="{'ngNoMultiSelect': !multiSelect}">
+            <span class="ngLabel">Quick Tip: Click on any column heading to sort the states by that field. </span>
+        </div>        
+    </div>
+    <div class="ngPagerContainer" style="float: right; margin-top: 10px;" ng-show="enablePaging" ng-class="{'ngNoMultiSelect': !multiSelect}">
+        <div style="float:left; margin-right: 10px;" class="ngRowCountPicker">
+            
+        </div>
+        <div style="float:left; margin-right: 10px; line-height:25px;" class="ngPagerControl">
+            <button type="button" class="ngPagerButton" ng-click="pageBackward()" ng-disabled="cantPageBackward()" title="Previous Page" disabled="disabled"><div class="ngPagerFirstTriangle ngPagerPrevTriangle"></div></button>
+            <span> Page {{pagingOptions.currentPage}} </span>
+            <button type="button" class="ngPagerButton" ng-click="pageForward()" ng-disabled="cantPageForward()" title="Next Page"><div class="ngPagerLastTriangle ngPagerNextTriangle"></div></button>            
+        </div>
+    </div>
+</div>

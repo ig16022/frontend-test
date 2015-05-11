@@ -1,0 +1,38 @@
+<!--
+    Login view
+-->
+
+
+<div class="well objShadow" ng-controller="loginController"> <!-- Authorization controller, defined in loginController.js -->
+    <div class="alert alert-info" ng-hide="authenticationError">
+        Enter your username and password and click the <strong>Log In</strong> button to continue
+    </div>
+    <div class="alert alert-danger" ng-show="authenticationError"> 
+        Authentication Failed ({{authenticationError}}). Please try again.
+    </div>
+
+    <div class="fourtyPercentW centerDiv padTop40 padBottom40">
+	    <form name="authForm" novalidate>
+	        
+	        <div class="form-group">
+	            <label>Username</label>
+	            <input name="username" class="form-control" ng-model="username" required />
+	        </div>
+
+	        <div class="form-group">
+	            <label>Password</label>
+	            <input name="password" type="password" class="form-control"
+	                ng-model="password" required />
+	        </div>
+
+	        <div class="text-center">
+	            <button ng-click="authenticate(username, password)"
+	                ng-disabled="authForm.$invalid"
+	                class="btn btn-primary padLeft40 padRight40">
+	                Log In
+	            </button>
+	        
+	        </div>
+	    </form>
+	</div>
+</div>

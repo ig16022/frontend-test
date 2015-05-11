@@ -1,0 +1,179 @@
+body {
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+#main {
+	padding-top: 0;
+	margin-top:0;
+}
+
+.navbar {
+	margin-bottom:10; <!-- less white space between navbar and the views -->
+}
+
+.jumbotron {
+	padding-top:15px;
+	padding-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+	.jumbotron h1 {
+	  font-size: 45px;
+	}
+}
+
+.jumboHeader {
+	padding-bottom: 10px;
+}
+
+select {
+	color: #3276b1;
+	padding: 5px;
+}
+
+.gridStyle {
+    border: 1px solid lightgray;
+    height: 390px;  
+}
+
+.btn-margin-top
+{
+	margin-top:20px;
+}
+
+.objShadow
+{
+	-webkit-box-shadow: 5px 5px 7px -1px rgba(158,158,158,1);
+	-moz-box-shadow: 5px 5px 7px -1px rgba(158,158,158,1);
+	box-shadow: 5px 5px 7px -1px rgba(158,158,158,1);
+}
+
+
+.reportContainer
+{
+	border: 1px solid lightgray;
+	padding: 10px;
+}
+
+p.nowrap {
+    white-space: nowrap;
+}
+
+span.minW180
+{
+	min-width: 180px;
+	display: inline-block;
+}
+
+.report > p
+{
+	border-bottom: 1px dotted lightgray;
+}
+
+.leftText
+{
+	text-align: left;
+}
+
+.rightText
+{
+	text-align: right;
+}
+
+.fourtyPercentW 
+{
+	width:40%;
+}
+
+.fiftyPercentW 
+{
+	width:50%;
+}
+
+.centerDiv
+{
+	margin: 0 auto;
+}
+
+.noPaddingNoBorder
+{
+	padding:0px !Important;
+	border:0;
+}
+
+.floatLeft200 {
+	float:left;
+	width:200px;
+}
+
+.padTop40
+{
+	padding-top: 40px;
+}
+
+.padBottom40
+{
+	padding-bottom: 40px;
+}
+
+.padLeft40
+{
+	padding-left: 40px;
+}
+
+.padRight40
+{
+	padding-right: 40px;
+}
+
+.padBottom60
+{
+	padding-bottom: 60px;
+}
+
+.simpleBorder
+{
+	border: 1px solid lightgray;
+}
+
+.shortInput
+{
+	width: 150px;
+	min-width: 150px;
+}
+
+.wideInput
+{
+	width: 100%;
+	min-width: 200px;
+}
+
+
+p {
+    opacity: 1;
+}
+p.ng-enter {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    opacity: 0;
+}
+p.ng-enter-active {
+    opacity: 1;
+}
+
+div {
+    opacity: 1;
+}
+div.ng-enter {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.0s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.0s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.0s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.0s;
+    opacity: 0;
+}
+div.ng-enter-active {
+    opacity: 1;
+}

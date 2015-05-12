@@ -13,7 +13,7 @@
 	- ng-grid (grid)
 
 # What influenced the design of your user interface?
-	- The functional requirements / nature of the application
+	- The functional requirements / nature of the application / locked API
 
 	- Bootstrap
 

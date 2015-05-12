@@ -15,7 +15,7 @@
     </div>
 
     <div class="alert alert-success" ng-show="messageReceived">
-        <p>Thanks! We'll be in touch!</p>        
+        <p>Thanks. We'll be in touch!</p>        
     </div>    
 
 
@@ -56,7 +56,7 @@
 
 					<p ng-repeat="messageRec in allMessages">
 						<!-- displaying user name and message only, no phone number-->
-						<span class='minW180'>From user <strong>{{messageRec.user | uppercase}}</strong>:</span>
+						<span class='minW180'>From user <strong><span class='titlecase' ng-bind="messageRec.user"</span></strong>:</span>
 						<span ng-bind="messageRec.message"></span>
 					</p>
 					
